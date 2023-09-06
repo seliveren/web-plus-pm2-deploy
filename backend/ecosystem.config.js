@@ -19,7 +19,7 @@ module.exports = {
       repo: 'https://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@github.com/seliveren/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
       'pre-deploy': `scp ./*.env.deploy ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/current/backend`,
-      'post-deploy': `cd ${DEPLOY_PATH}/current/backend && npm i && npm run build && pm2 startOrRestart ecosystem.config.js`,
+      'post-deploy': `cd ${DEPLOY_PATH}/current/backend && npm i && npm run build && pm2 start ecosystem.config.js`,
     },
   },
 };
