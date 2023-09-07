@@ -12,7 +12,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: 'https://github.com/seliveren/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
-      'pre-deploy': `scp -r -i ~/.ssh/authorized_keys ./*.env.deploy ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
+      'pre-deploy': `scp -r -i ~/.ssh ./*.env.deploy ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
       'post-deploy': `cd ${DEPLOY_PATH}/current/frontend && npm i && npm run build`,
     },
   },
