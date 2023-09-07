@@ -10,7 +10,6 @@ module.exports = {
     script: './dist/app.js',
   }],
 
-  // Настройка деплоя
   deploy: {
     production: {
       user: DEPLOY_USER,
