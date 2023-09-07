@@ -18,7 +18,7 @@ module.exports = {
       repo: 'https://github.com/seliveren/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
       'pre-deploy-local': `scp ./.env.deploy ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/current/backend`,
-      'post-deploy': `cd ${DEPLOY_PATH}/current/backend && npm i && npm run build`,
+      'post-deploy': `cd ${DEPLOY_PATH}/current/backend && npm ci && npm run build`,
     },
   },
 };
