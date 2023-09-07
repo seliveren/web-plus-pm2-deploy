@@ -9,7 +9,6 @@ module.exports = {
     name: 'backend',
     script: './dist/app.js',
   }],
-
   deploy: {
     production: {
       user: DEPLOY_USER,
